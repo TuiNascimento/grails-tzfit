@@ -1,16 +1,38 @@
 package tzfit
 
+import grails.plugin.springsecurity.SpringSecurityService
+import grails.plugin.springsecurity.annotation.Secured
+import grails.plugin.springsecurity.userdetails.GrailsUser
+import groovy.transform.CompileStatic
+
+@CompileStatic
+@Secured('isAuthenticated()')
 class HomeController {
 
+    static responseFormats = ['json']
+
+    static SpringSecurityService springSecurityService
+
     def index() {
-        respond ([name: session.name?: 'User', sheetsTotal: Sheet.count()])
+        [name : loggedUserName()]
     }
 
-    def updateName(String name){
-        session.name = name
-        flash.message = "Name has been updated"
+    public static String loggedUserName(){
 
-        redirect action: 'index'
+        Object principal = springSecurityService.principal;
+
+        if (null == principal) {
+            return null
+        }
+        if(principal instanceof String) {
+            return principal;
+        }
+        if(principal instanceof GrailsUser) {
+            return ((GrailsUser) principal).username
+        }
+
+        null
     }
+
 }
 

@@ -13,4 +13,8 @@ class Movement {
         videoResource(nullable: true)
         description(nullable: true)
     }
+
+    String toString(){
+        title
+    }
 }

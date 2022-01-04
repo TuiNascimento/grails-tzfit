@@ -1,6 +1,6 @@
 package tzfit
 
-class Athlete extends User{
+class Athlete extends User {
 
     static hasMany = [availableSheets: Sheet]
 

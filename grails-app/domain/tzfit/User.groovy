@@ -1,20 +1,39 @@
 package tzfit
 
-class User {
+import grails.plugin.springsecurity.annotation.Secured
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
+import grails.compiler.GrailsCompileStatic
 
-    String code
-    String fullName
+@GrailsCompileStatic
+@EqualsAndHashCode(includes='username')
+@ToString(includes='username', includeNames=true, includePackage=false)
+class User implements Serializable {
+
+    private static final long serialVersionUID = 1
+
+    String username
     String password
-    String email
-    Date birthDate
+    String fullName
+    boolean enabled = true
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
 
-    static constraints = {
-        code size: 3..15, blank: false, unique: true
-        password maxSize: 255, blank: false, password: true
-        email email: true, blank: false
+    Set<Role> getAuthorities() {
+        (UserRole.findAllByUser(this) as List<UserRole>)*.role as Set<Role>
     }
 
-    String toString(){
+    static constraints = {
+        password nullable: false, blank: false, password: true
+        username nullable: false, blank: false, unique: true
+    }
+
+    static mapping = {
+	    password column: '`password`'
+    }
+
+    String toString() {
         fullName
     }
 }

@@ -29,10 +29,11 @@ pre {
 /* customizing bootstrap nav bar */
 .navbar {
     margin-bottom: 0px;
-    padding-right: 110px;
+    padding-right: 20px;
 }
 .navbar .container {
     margin: 10px;
+    width: auto;
 }
 .navbar-dark a {
     color: #ffffff !important;
@@ -49,7 +50,7 @@ pre {
 }
 a.navbar-brand {
     color: white !important;
-    font-size: 19px !important;
+    font-size: 32px !important;
     text-decoration: none;
 }
 .navbar-dark .navbar-nav>.active>a, .navbar-dark .navbar-nav>.active>a:hover, .navbar-dark .navbar-nav>.active>a:focus {

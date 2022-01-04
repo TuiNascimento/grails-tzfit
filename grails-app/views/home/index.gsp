@@ -9,7 +9,8 @@
 <html>
 <html>
 <head>
-    <meta name="layout" content="public"/>
+    <g:set var="currentUserName" value="${name}" scope="request"/>
+    <meta name="layout" content="main"/>
     <title>Home Page</title>
 </head>
 <body>
