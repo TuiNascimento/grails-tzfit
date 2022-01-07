@@ -98,4 +98,10 @@ class MovementController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    public static String getVideoEmbedLink(Serializable id){
+        Movement movement = Movement.get(id)
+        URL url = new URL(movement.getVideoResource());
+        String embedURL = "https://www.youtube-nocookie.com/embed/${url.getPath()}" ;
+    }
 }
