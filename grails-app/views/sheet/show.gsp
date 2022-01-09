@@ -27,5 +27,12 @@
                 </fieldset>
             </g:form>
         </div>
+
+    <div clas="container">
+        <g:render template="templates/movement/info" model="[
+                movement: sheet.movements[0]
+        ]"></g:render>
+    </div>
+
     </body>
 </html>
