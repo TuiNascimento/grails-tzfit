@@ -1,8 +1,6 @@
-<g:set var="entityName" value="${message(code: "${controllerName}.${actionName}.title")}"/>
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
+    <title><g:message code="${controllerName}.${actionName}.title"/></title>
 </head>
