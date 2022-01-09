@@ -104,6 +104,7 @@ class MovementController {
         if (movement.videoResource) {
             URL url = new URL(movement.videoResource)
             String embedURL = "https://www.youtube-nocookie.com/embed/${url.path}"
+            return embedURL
         }
         return ""
     }
