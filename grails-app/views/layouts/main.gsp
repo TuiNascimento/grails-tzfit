@@ -50,6 +50,7 @@
                 </g:hasRole>
                 <g:hasRole role="ROLE_ATHLETE">
                     <g:link controller="sheet" action="index">Available Sheets</g:link>
+                    <g:link controller="movement">Movements</g:link>
                 </g:hasRole>
                 <g:link controller="logout">Logout</g:link>
             </div>
@@ -60,8 +61,5 @@
 </div>
 
 <g:layoutBody/>
-
-<div class="footer" role="contentinfo"></div>
-
 </body>
 </html>

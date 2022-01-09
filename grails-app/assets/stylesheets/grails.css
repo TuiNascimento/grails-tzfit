@@ -50,7 +50,7 @@ pre {
 }
 a.navbar-brand {
     color: white !important;
-    font-size: 32px !important;
+    font-size: 28px !important;
     text-decoration: none;
 }
 .navbar-dark .navbar-nav>.active>a, .navbar-dark .navbar-nav>.active>a:hover, .navbar-dark .navbar-nav>.active>a:focus {

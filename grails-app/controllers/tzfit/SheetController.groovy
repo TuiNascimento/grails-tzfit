@@ -2,6 +2,10 @@ package tzfit
 
 import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
+import tzfit.Movement
+import tzfit.Sheet
+import tzfit.SheetService
+import tzfit.Athlete
 import static org.springframework.http.HttpStatus.*
 
 @Secured(['ROLE_ADMIN','ROLE_COACH', 'ROLE_ATHLETE'])
