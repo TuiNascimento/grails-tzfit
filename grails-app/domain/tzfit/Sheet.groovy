@@ -14,7 +14,6 @@ class Sheet {
         movements joinTable: [name: "sheet_movements", key: 'sheet_id']
     }
 
-
     String toString(){
         "$title - " + sheetCoach + " #$id"
     }
