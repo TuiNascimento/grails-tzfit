@@ -102,9 +102,13 @@ class MovementController {
     public static String getVideoEmbedLink(Serializable id) {
         Movement movement = Movement.get(id)
         if (movement.videoResource) {
-            URL url = new URL(movement.videoResource)
-            String embedURL = "https://www.youtube-nocookie.com/embed/${url.path}"
-            return embedURL
+            try {
+                URL url = new URL(movement.videoResource)
+                String embedURL = "https://www.youtube-nocookie.com/embed/${url.path}"
+                return embedURL
+            } catch(Exception e) {
+                println "MovementController.getVideoEmbedLink() -> ${e}"
+            }
         }
         return ""
     }
