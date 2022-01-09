@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="layout" content="main" />
-        <asset:stylesheet src="Movement/show.css"/>
+        <asset:stylesheet src="domain-edition/show.css"/>
         <g:set var="entityName" value="${message(code: 'movement.label', default: 'Movement')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
