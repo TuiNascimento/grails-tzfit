@@ -1,5 +1,6 @@
 package tzfit
 
+import grails.gorm.transactions.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
@@ -50,6 +51,7 @@ class SheetController {
         respond sheetService.get(id)
     }
 
+    @Transactional
     def update(Sheet sheet) {
         if (sheet == null) {
             notFound()
@@ -57,7 +59,7 @@ class SheetController {
         }
 
         try {
-            sheetService.save(sheet)
+            sheet.save(flush: true)
         } catch (ValidationException e) {
             respond sheet.errors, view:'edit'
             return
