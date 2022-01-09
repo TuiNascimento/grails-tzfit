@@ -8,10 +8,6 @@ class Movement {
 
     static hasMany = [sheetsDisplayedOn: Sheet]
 
-    static mapping = {
-        sheetsDisplayedOn joinTable: [name: "sheet_movements", key: 'movement_id']
-    }
-
     static constraints = {
         title(maxSize: 255, blank: false, unique: true)
         videoResource(nullable: true)

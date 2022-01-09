@@ -10,9 +10,7 @@ class Sheet {
     static constraints = {
     }
 
-    static mapping = {
-        movements joinTable: [name: "sheet_movements", key: 'sheet_id']
-    }
+    static mapping = {}
 
     String toString(){
         "$title - " + sheetCoach + " #$id"
