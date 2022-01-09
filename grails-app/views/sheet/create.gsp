@@ -30,7 +30,7 @@
                 <fieldset class="form">
                     <div class="field-container">
                         <label for="title">Title: </label>
-                        <g:textField name="title"/>
+                        <g:textField name="title" value="${this.sheet.title}"/>
                     </div>
                     <div class="field-container">
                         <label for="sheetCoach">Coach: </label>
@@ -43,6 +43,10 @@
                     <div class="field-container">
                         <label for="movements">Movements: </label>
                         <g:select multiple="true" name="movements" from="${tzfit.Movement.list()}" optionKey="id" optionValue="title"/>
+                    </div>
+                    <div class="field-container">
+                        <label for="title">Estimated duration (minutes): </label>
+                        <g:textField name="estimatedMinutesDuration" />
                     </div>
                 </fieldset>
                 <fieldset class="buttons">

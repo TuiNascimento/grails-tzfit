@@ -4,6 +4,7 @@ class Sheet {
 
     String title
     Coach sheetCoach
+    int estimatedMinutesDuration
 
     static hasMany = [movements: Movement, athletes:Athlete]
 
