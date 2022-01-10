@@ -9,6 +9,7 @@ class BootStrap {
         createAdmin()
         createTestUsers()
         createMovements()
+        createFiles()
     }
 
     @Transactional
@@ -64,6 +65,16 @@ class BootStrap {
         def mov3 = Movement.findOrSaveWhere(title: "The Strict Toes-to-Rings", videoResource: "https://youtu.be/1zp-B1Vb_Vs")
     }
 
+    @Transactional
+    createFiles() {
+        def img1 = TZFile.findOrSaveWhere(title: "hero", path: "../../assets/crossfit/hero.jpg")
+        def img2 = TZFile.findOrSaveWhere(title: "exhausted", path: "../../assets/crossfit/exhausted.jpg")
+        def img3 = TZFile.findOrSaveWhere(title: "pistol", path: "../../assets/crossfit/pistol.jpg")
+        def img4 = TZFile.findOrSaveWhere(title: "pullup", path: "../../assets/crossfit/pullup.jpg")
+        def img5 = TZFile.findOrSaveWhere(title: "rings", path: "../../assets/crossfit/rings.jpg")
+        def img6 = TZFile.findOrSaveWhere(title: "rings-superman", path: "../../assets/crossfit/rings-superman.jpg")
+        def img7 = TZFile.findOrSaveWhere(title: "snatch-car", path: "../../assets/crossfit/snatch-car.jpg")
+    }
     def destroy = {
     }
 }

@@ -3,6 +3,7 @@ package tzfit
 class Sheet {
 
     String title
+    TZFile coverImage
     Coach sheetCoach
     int estimatedMinutesDuration
 

@@ -11,7 +11,6 @@
     display: block;
     margin: 5px;
     position: relative;
-    background-image: url("../../images/crossfit/hero.jpg");
     background-color: rgba(0, 0, 0, 0.85); /* use rgba for fine adjustments */
     background-blend-mode: multiply;
     background-size: cover;
@@ -23,6 +22,7 @@
     text-decoration: none;
     font-family: "Source Code Pro", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-weight: bolder;
+    font-size: 18px;
     color: #f0f0fa;
 }
 
@@ -33,6 +33,6 @@
     color: #f0f0fa;
 }
 
-.sheet-info {
-
+i::before {
+    margin-right: 4px;
 }
