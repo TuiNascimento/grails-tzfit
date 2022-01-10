@@ -8,7 +8,7 @@ class TZFile {
     static constraints = {
     }
 
-    String toString(){
-        title
+    String toString() {
+        return title
     }
 }
