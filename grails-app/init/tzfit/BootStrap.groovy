@@ -60,9 +60,32 @@ class BootStrap {
 
     @Transactional
     void createMovements() {
-        def mov1 = Movement.findOrSaveWhere(title: "The Legless Rope climb", videoResource: "https://youtu.be/rfr-Tw3Pxh8", description: "The Legless Rope Climb consists of climbing the rope without the help of your legs. It helps corporal balance and arms strenght.")
-        def mov2 = Movement.findOrSaveWhere(title: "The Butterfly Pull-Up", videoResource: "https://youtu.be/U_MhBXnlInE")
-        def mov3 = Movement.findOrSaveWhere(title: "The Strict Toes-to-Rings", videoResource: "https://youtu.be/1zp-B1Vb_Vs")
+        def mov1 = Movement.findOrSaveWhere(
+                title: "The Legless Rope climb",
+                videoResource: "https://youtu.be/rfr-Tw3Pxh8",
+                description: "The Legless Rope Climb consists of climbing the rope without the help of your legs. It helps corporal balance and arms strenght.",
+                estimatedDuration: 15,
+                sets: 2,
+                repetitions: 5
+        )
+        def mov2 = Movement.findOrSaveWhere(
+                title: "The Butterfly Pull-Up",
+                videoResource: "https://youtu.be/U_MhBXnlInE",
+                description: "Butterflies have a very specific reason - they are by far the most efficient way to meet the pull-up standard in CrossFit. The pull-up rep has to begin with arms fully locked out and finish with your chin above the plane of the pull-up bar. Unless specified, how you get from A to B is down to you.",
+                estimatedDuration: 8,
+                sets: 3,
+                repetitions: 12)
+        def mov3 = Movement.findOrSaveWhere(
+                title: "The Strict Toes-to-Rings",
+                description: "Hang from the rings at full arm extension.\n " +
+                        "Kip swing chest forward and back.\n" +
+                        "Press down on the rings with straight arms.\n" +
+                        "While leaning back, knees up, then kick toes to rings.\n" +
+                        "Bring feet down rapidly and swing forward at the shoulders.",
+                videoResource: "https://youtu.be/1zp-B1Vb_Vs",
+                estimatedDuration: 10,
+                sets: 4,
+                repetitions: 12)
     }
 
     @Transactional
