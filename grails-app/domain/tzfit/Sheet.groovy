@@ -19,7 +19,7 @@ class Sheet {
 
     int getEstimatedDuration() {
         int estimatedDuration
-        for (Movement movement : movements){
+        for (Movement movement : movements) {
             estimatedDuration += movement.estimatedDuration
         }
         return estimatedDuration
