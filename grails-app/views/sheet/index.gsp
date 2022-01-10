@@ -21,15 +21,15 @@
         <g:each var="sheet" in="${sheetList}">
             <div class="sheet-item col-md-3">
                 <g:link controller="sheet" action="show" id="${sheet.id}">
-                <div class="sheet-title">
-                    <h3>${sheet.title}</h3>
-                </div>
-                <div class="sheet-info-container">
-                    <div class="sheet-info">
-                        <i class="fas fa-list"> ${sheet.movements.size()} movements</i>
-                        <i class="far fa-clock"> ${sheet.estimatedMinutesDuration} minutes</i>
+                    <div class="sheet-title">
+                        <h3>${sheet.title}</h3>
                     </div>
-                </div>
+                    <div class="sheet-info-container">
+                        <div class="sheet-info">
+                            <i class="fas fa-list">${sheet.movements.size()} movements</i>
+                            <i class="far fa-clock">${sheet.estimatedMinutesDuration} minutes</i>
+                        </div>
+                    </div>
                 </g:link>
             </div>
         </g:each>

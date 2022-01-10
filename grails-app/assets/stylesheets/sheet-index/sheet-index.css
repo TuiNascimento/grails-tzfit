@@ -1,11 +1,12 @@
-.sheet-list-container{
+.sheet-list-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 90%;
     margin: auto;
 }
-.sheet-item{
+
+.sheet-item {
     height: 150px;
     display: block;
     margin: 5px;
@@ -16,19 +17,22 @@
     background-size: cover;
     border-radius: 5%;
 }
-.sheet-title{
+
+.sheet-title {
     height: 100%;
     text-decoration: none;
     font-family: "Source Code Pro", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     font-weight: bolder;
     color: #f0f0fa;
 }
-.sheet-info-container{
+
+.sheet-info-container {
     height: 25%;
     position: absolute;
     bottom: 0;
     color: #f0f0fa;
 }
-.sheet-info{
+
+.sheet-info {
 
 }
