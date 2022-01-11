@@ -30,20 +30,15 @@
             <g:form resource="${this.sheet}" method="PUT">
                 <g:hiddenField name="version" value="${this.sheet?.version}" />
                 <fieldset class="form">
-                    <div class="field-container">
-                        <label for="title">Title: </label>
-                        <g:textField name="title"/>
-                    </div>
-                    <div class="field-container">
-                        <label for="sheetCoach">Coach: </label>
-                        <g:select name="sheetCoach" from="${tzfit.Coach.list()}" optionKey="id" optionValue="fullName" />
-                    </div>
-                    <div class="field-container">
-                        <label for="athletes">Athletes: </label>
+                    <f:all bean="sheet" except="athletes,movements" />
+                    <div class="fieldcontain required">
+                        <g:fieldLabel for="athletes"/>
                         <g:select multiple="true" name="athletes" from="${tzfit.Athlete.list()}" optionKey="id" optionValue="fullName"/>
                     </div>
-                    <div class="field-container">
-                        <label for="movements">Movements: </label>
+                    <div class="fieldcontain required">
+                        <label for="movements">Movements:
+                            <span class="required-indicator">*</span>
+                        </label>
                         <g:select multiple="true" name="movements" from="${tzfit.Movement.list()}" optionKey="id" optionValue="title"/>
                     </div>
                 </fieldset>
