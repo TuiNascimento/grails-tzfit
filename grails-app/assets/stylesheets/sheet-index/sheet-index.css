@@ -1,20 +1,20 @@
 .sheet-list-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     width: 90%;
     margin: auto;
 }
 
 .sheet-item {
-    height: 150px;
+    height: 180px;
     display: block;
-    margin: 5px;
+    margin: 2%;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.85); /* use rgba for fine adjustments */
+    background-color: rgba(0, 0, 0, 0.55); /* use rgba for fine adjustments */
     background-blend-mode: multiply;
     background-size: cover;
-    border-radius: 5%;
+    border-radius: 15px;
 }
 
 .sheet-title {

@@ -20,7 +20,7 @@
 
     <div class="sheet-list-container">
         <g:each var="sheet" in="${sheetList}">
-            <div class="sheet_${sheet.id} sheet-item col-md-3">
+            <div class="sheet_${sheet.id} sheet-item col-md-5">
                 <g:link controller="sheet" action="show" id="${sheet.id}">
                     <div class="sheet-title">
                         <h3>${sheet.title}</h3>
