@@ -4,10 +4,11 @@
     justify-content: flex-start;
     width: 90%;
     margin: auto;
+    column-gap: 8%;
 }
 
 .sheet-item {
-    height: 180px;
+    height: 13rem;
     display: block;
     margin: 2%;
     position: relative;
